@@ -1,36 +1,58 @@
  <?php
-// include "connect.php";
+include "package.html";
+include "db_connect.php";
 include "navbar.php";
 
+if ($_SERVER["REQUEST_METHOD"] == "POST") 
+{
+  $username = $_POST["username"];
+  $password = $_POST["password"];
 
-	if ($_SERVER["REQUEST_METHOD"] == "POST") 
-	{
-	    $username = $_POST["username"];
-		  $password = $_POST["password"];
-	
-
-   
-
-
-	$sql = "SELECT * from `login` where `Username`='$username' && `Password`= '$password'";
-  // $sql = "SELECT * from register where `Username`='$username' && `Password`='$password'";
-    $result = mysqli_query($con, $sql);
-		if ($result) 
-		{
-            echo '<script>alert("Login SuccessFull !!!")</script>';
- 		} 
- 		else 
- 		{
- 	       echo '<script>alert("Invalid Username And Password!!!")</script>';
-		}
-	}
+  $sql = "SELECT * from register where `Username`='$username' && `Password`='$password'";
+  $result = mysqli_query($conn,$sql);
+  $num = mysqli_num_rows($result);
+      if ($num==1) {
+           //echo '<script>alert("Login successful !!!");window.location.href = "home.php";</script>';
+           
+              $_SESSION['success'] = 'Login successful.... Welcome back!';   
+              $_SESSION['loggedin'] = true;
+              $_SESSION['username'] = $username;
+              if (isset($_SESSION['success'])) {
+                  $success_message = $_SESSION['success'];
+                  unset($_SESSION['success']);
+                  echo "<script>
+                  Swal.fire({
+                    title: 'success',
+                    text: '$success_message',
+                    icon: 'success',
+                    confirmButtonText: 'OK'
+                  }).then(function() {
+                window.location.href = 'home.php';
+                console.log('The Ok Button was clicked.');
+                });
+             </script>";
+              
+                }
+            
+      } 
+      else 
+      {
+        echo "<script>
+                  Swal.fire({
+                    title: 'error',
+                    text: 'Invalid Credentials!!!!!',
+                    icon: 'error',
+                    confirmButtonText: 'Try Again'
+                  }).then(function() {
+                window.location.href = 'login.php';
+                console.log('The Try Again Button was clicked.');
+                });
+             </script>";
+      }
+      
+  }
   
 ?> 
-
-
-
-
-
 
 <html>      
     <style>
@@ -129,6 +151,7 @@ body {
             <input type="password" name="password" id="password" placeholder="Enter Password" required/>
  
             <button>Login</button>
+            <p class="message">Not registered? <a href="register.php">Create an account</a></p>
           </form>
         </div>
       </div>

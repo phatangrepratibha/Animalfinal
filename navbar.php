@@ -1,3 +1,21 @@
+<?php
+session_start();
+if(isset($_SESSION['loggedin']) && $_SESSION['loggedin']==true)
+{
+  $loggedin = true;
+}
+else{
+  $loggedin = false;
+}
+if(isset($_SESSION['adminloggedin']) && $_SESSION['adminloggedin']==true)
+{
+   $adminloggedin= true;
+}
+else{
+
+  $adminloggedin =false;
+}
+echo'
 <html>
     <head>
         <meta charset="utf-8" />
@@ -49,15 +67,29 @@
             <a class="nav-link" href="about.php"> About Us </a>
             </li>
             <li class="nav-item">
+            <a class="nav-link " href="card.php"> Animals </a>
+            </li>
+            <li class="nav-item">
             <a class="nav-link pr-lg-0" href="contact.php"> Contact us</a>
             </li>
-</ul>
+        </ul>
             <ul class="navbar-nav ms-auto">
-            <li class="nav-item ">
+            <li class="nav-item ">';
+            if(!$loggedin)
+            {
+              echo'
             <a class="btn btn-dark" href="login.php">Login</a>
-            <a class="btn btn-dark" href="register.php">Register</a>
+            <a class="btn btn-dark" href="register.php">Register</a>';
+            }
+            if($loggedin)
+            {
+              echo'
+              <a class="btn btn-dark" href="logout.php">Log Out</a>';
+            }
+            echo'
         </ul>
         </div>
     </nav>
     </body>
-</html>
+</html>';
+?>

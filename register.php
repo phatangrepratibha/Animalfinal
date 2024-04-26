@@ -1,34 +1,72 @@
 <?php
-// include "connect.php";
+include "package.html";
+include "db_connect.php";
 include "navbar.php";
 
-	if ($_SERVER["REQUEST_METHOD"] == "POST") 
+if ($_SERVER["REQUEST_METHOD"] == "POST") 
 	{
-	    $username = $_POST["username"];
-		  $password = $_POST["password"];
-	
+    $fname = $_POST["fname"];
+    $lname = $_POST["lname"];
+		$username = $_POST["username"];
+    $email = $_POST["email"];
+    $phone = $_POST["phone"];
+		$password = $_POST["password"];
 
-   
+    $existSql = "SELECT * FROM `register` WHERE Username = '$username'";
+    //$result = mysqli_query($conn, $existSql);
+    $numExistRows = mysqli_num_rows(mysqli_query($conn, $existSql));
+    if($numExistRows > 2)
+    {
+      //echo '<script>alert("Username Already Exists !!!!!Plz Try Again...");window.location.href = "register.php";</script>';
+      echo "<script>
+                    Swal.fire({
+                      title: 'error',
+                      text: 'Username Already Exists !!!!!Plz Try Again...',
+                      icon: 'error',
+                      confirmButtonText: 'Try Again'
+                    }).then(function() {
+                  window.location.href = 'register.php';
+                  console.log('The Try Again Button was clicked.');
+                  });
+               </script>";
+    }
 
-
-	$sql = "SELECT * from `login` where `Username`='$username' && `Password`= '$password'";
-  // $sql = "SELECT * from register where `Username`='$username' && `Password`='$password'";
-    $result = mysqli_query($con, $sql);
+		$sql = "INSERT INTO `register`(`Fname`,`Lname`,`Username`,`Email`,`Phone`,`Password`) VALUES ('$fname','$lname','$username', '$email', '$phone','$password')";
+    $result = mysqli_query($conn, $sql);
 		if ($result) 
 		{
-            echo '<script>alert("Login SuccessFull !!!")</script>';
+        //echo '<script>alert("Registration successful!!!!!Plz Login");window.location.href = "login.php";</script>'; 
+        echo "<script>
+                Swal.fire({
+                  title: 'success',
+                  text: 'Registration successful!!!!!Plz Login',
+                  icon: 'success',
+                  confirmButtonText: 'OK'
+                }).then(function() {
+              window.location.href = 'login.php';
+              console.log('The Ok Button was clicked.');
+              });
+            </script>"; 
  		} 
  		else 
  		{
- 	       echo '<script>alert("Invalid Username And Password!!!")</script>';
+ 			//echo '<script>alert("Registration Failed!!! Plzz try again......");window.location.href = "register.php";</script>';
+       echo "<script>
+       Swal.fire({
+         title: 'error',
+         text: 'Registration Failed!!! Please try again......',
+         icon: 'error',
+         confirmButtonText: 'Try Again'
+       }).then(function() {
+     window.location.href = 'register.php';
+     console.log('The Try Again Button was clicked.');
+     });
+  </script>";
 		}
 	}
   
+  
 ?>
-
-
-
-
 
 
 <html>      
@@ -124,11 +162,11 @@ body {
             </div>
           </div>
           <form class="register" method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>">
-            <input type="text" name="first" id="first" placeholder="Enter First Name" required/>
-            <input type="text" name="last" id="last" placeholder="Enter Last Name" required/>
+            <input type="text" name="fname" id="fname" placeholder="Enter First Name" required/>
+            <input type="text" name="lname" id="lname" placeholder="Enter Last Name" required/>
             <input type="text" name="username" id="username" placeholder="Enter UserName" required/>
-            <input type="text" name="email" id="email" placeholder="Enter Email" required/>
-            <input type="text" name="phone" id="phone" placeholder="Enter Phone" required/>
+            <input type="email" name="email" id="email" placeholder="Enter Email" required/>
+            <input type="number" name="phone" id="phone" placeholder="Enter Phone" required/>
             <input type="password" name="password" id="password" placeholder="Enter Password" required/>
  
             <button>Register</button>

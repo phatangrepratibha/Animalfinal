@@ -1,6 +1,30 @@
 <?php
 include "navbar.php";
-// include "about.php";
+include "db_connect.php";
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") 
+	{
+    $fullname = $_POST["fullname"];
+    $email = $_POST["email"];
+    $colour = $_POST["colour"];
+    $age = $_POST["age"];
+    $gender = $_POST["gender"];
+    $city = $_POST["city"];
+    $address = $_POST["address"];
+    $phone = $_POST["phone"];
+		
+
+		$sql = "INSERT INTO `mainecooncat`(`Name`,`Email`, `Colour`, `Age`, `Gender`, `City`, `Address`, `Phone`) VALUES ('$fullname','$email', '$colour','$age', '$gender','$city', '$address','$phone')";
+
+		if (mysqli_query($conn, $sql)) 
+		{
+            echo '<script>alert("Your form has been successfully submitted....We will contact you soon!!!!");</script>';
+		} 
+		else 
+		{
+			echo "Error: " . mysqli_error($conn);
+		}
+	}
 ?>
 <!doctype html>
 <html lang="en">
@@ -38,7 +62,7 @@ include "navbar.php";
           <div class="col-12 col-xl-11">
             <div class="bg-white border rounded shadow-sm overflow-hidden">
 
-              <form action="#!">
+              <form method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>">
                 <div class="row gy-4 gy-xl-5 p-4 p-xl-5">
                   <div class="col-12">
                     <label for="fullname" class="form-label">Full Name <span class="text-danger">*</span></label>
@@ -57,7 +81,7 @@ include "navbar.php";
                   </div>
                   <div class="col-12">
                     <label for="fullname" class="form-label">Cat Color <span class="text-danger">*</span></label>
-                    <input type="text" class="form-control" id="color" name="color" value="" required>
+                    <input type="text" class="form-control" id="colour" name="colour" value="" required>
                   </div>
 
                   <div class="col-12">
@@ -77,7 +101,7 @@ include "navbar.php";
 
                   <div class="col-12">
                     <label for="fullname" class="form-label">Adress <span class="text-danger">*</span></label>
-                    <input type="text" class="form-control" id="adress" name="adress" value="" required>
+                    <input type="text" class="form-control" id="address" name="address" value="" required>
                   </div>
                   <div class="col-12 col-md-6">
                     <label for="phone" class="form-label">Phone Number</label>

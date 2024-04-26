@@ -1,6 +1,9 @@
 <?php
 include "navbar.php";
-// include "about.php";
+if  ($_SESSION['loggedin']!=true)
+{
+    echo '<script>alert("Plzz Login!!!!");window.location.href = "login.php";</script>';
+}
 ?>
 <!doctype html>
 <html lang="en">

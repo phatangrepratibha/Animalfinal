@@ -40,7 +40,7 @@ include "navbar.php";
                     <div class="card" style="width: 20rem;">
                           <img src="images/gol.jpg" height="280px" class="card-img-top" alt="...">
                            <div class="card-body">
-                             <h5 class="card-title">Goldern Retriever Dog</h5>
+                             <h5 class="card-title">Golden Retriever Dog</h5>
                               <a href="golform.php" class="btn btn-success">Adopt</a>
                             </div>
                     </div>

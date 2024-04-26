@@ -95,12 +95,12 @@ include "navbar.php";
     </section>
 
 
- <?php
+<?php
 
-include "know.php";
-include "card.php";
-include "footer.php";
+ include "know.php";
+// include "card.php";
+ include "footer.php";
 
-?>
+?> 
     </body>
 </html>

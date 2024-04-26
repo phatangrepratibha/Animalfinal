@@ -1,3 +1,10 @@
+<?php
+include "navbar.php";
+if  ($_SESSION['loggedin']!=true)
+{
+    echo '<script>alert("Plzz Login!!!!");window.location.href = "login.php";</script>';
+}
+?>
 <html>
     <head>
         <meta charset="utf-8" />
@@ -28,6 +35,8 @@
         <link href="responsive.css" rel="stylesheet" />
     </head>
     <body>
+      <br>
+      <br>
       <div>
         <div class="container">
             <div class="row">
@@ -103,6 +112,11 @@
 
      </div>
 </div>
-   
-    </body>
+<br>
+<br>
+<br>
+</body>
 </html>
+<?php
+ include "footer.php";
+?> 
