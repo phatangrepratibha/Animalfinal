@@ -1,9 +1,32 @@
 <?php
 include "navbar.php";
+include "db_connect.php";
 if  ($_SESSION['loggedin']!=true)
 {
     echo '<script>alert("Plzz Login!!!!");window.location.href = "login.php";</script>';
 }
+if ($_SERVER["REQUEST_METHOD"] == "POST") 
+	{
+    $fullname = $_POST["fullname"];
+    $email = $_POST["email"];
+    $phone = $_POST["phone"];
+    $address = $_POST["address"];
+    $city = $_POST["city"];
+    $pincode = $_POST["pincode"];
+    $subject = $_POST["subject"];
+    $msg = $_POST["msg"];
+    
+		$sql = "INSERT INTO `contactform`(`FullName`,`Email`, `Phone`, `Address`, `City`, `Pincode`, `Subject`, `Msg`) VALUES ('$fullname','$email', '$phone','$address', '$city','$pincode', '$subject','$msg')";
+
+		if (mysqli_query($conn, $sql)) 
+		{
+            echo '<script>alert("Your form has been successfully submitted....We will contact you soon!!!!");</script>';
+		} 
+		else 
+		{
+			echo "Error: " . mysqli_error($conn);
+		}
+	}
 ?>
 <!doctype html>
 <html lang="en">
@@ -41,7 +64,7 @@ if  ($_SESSION['loggedin']!=true)
           <div class="col-12 col-xl-11">
             <div class="bg-white border rounded shadow-sm overflow-hidden">
 
-              <form action="#!">
+              <form form method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>">
                 <div class="row gy-4 gy-xl-5 p-4 p-xl-5">
                   <div class="col-12">
                     <label for="fullname" class="form-label">Full Name <span class="text-danger">*</span></label>
@@ -91,7 +114,7 @@ if  ($_SESSION['loggedin']!=true)
                   </div>
                   <div class="col-12">
                     <label for="message" class="form-label">Message <span class="text-danger">*</span></label>
-                    <textarea class="form-control" id="message" name="message" rows="3" required></textarea>
+                    <textarea class="form-control" id="msg" name="msg" rows="3" required></textarea>
                   </div>
                   <div class="col-12">
                     <div class="d-grid">

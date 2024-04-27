@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 26, 2024 at 09:48 PM
+-- Generation Time: Apr 27, 2024 at 10:17 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -20,6 +20,25 @@ SET time_zone = "+00:00";
 --
 -- Database: `animalfinal`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `admin`
+--
+
+CREATE TABLE `admin` (
+  `Username` varchar(50) NOT NULL,
+  `Password` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `admin`
+--
+
+INSERT INTO `admin` (`Username`, `Password`) VALUES
+('admin', 'admin123'),
+('[value-1]', '[value-2]');
 
 -- --------------------------------------------------------
 
@@ -102,6 +121,30 @@ CREATE TABLE `bulldog` (
 
 INSERT INTO `bulldog` (`Name`, `Email`, `Colour`, `Age`, `Gender`, `City`, `Address`, `Phone`) VALUES
 ('Prajakta Deogune ', 'simran@gmail.com', 'white', '1 year', 'male', 'Ahmed Nagar', 'Savedi', 1234567890);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `contactform`
+--
+
+CREATE TABLE `contactform` (
+  `FullName` varchar(50) NOT NULL,
+  `Email` varchar(50) NOT NULL,
+  `Phone` int(10) NOT NULL,
+  `Address` varchar(50) NOT NULL,
+  `City` varchar(20) NOT NULL,
+  `Pincode` varchar(20) NOT NULL,
+  `Subject` varchar(60) NOT NULL,
+  `Msg` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `contactform`
+--
+
+INSERT INTO `contactform` (`FullName`, `Email`, `Phone`, `Address`, `City`, `Pincode`, `Subject`, `Msg`) VALUES
+('Prajakta Deogune ', 'deoguneprajakta@gmail.com', 2147483647, 'Flat no-2,matoshri building,nirmal nagar, shirsath', 'Ahmed Nagar', '414003', 'found a cat on road', 'I have found a cat near my house, so i want to give to your team. so plz contact as soon as possible');
 
 -- --------------------------------------------------------
 
@@ -207,7 +250,8 @@ CREATE TABLE `persiancat` (
 --
 
 INSERT INTO `persiancat` (`Name`, `Email`, `Colour`, `Age`, `Gender`, `City`, `Address`, `Phone`) VALUES
-('Prajakta Deogune ', 'deoguneprajakta@gmail.com', 'white', '1 year', 'male', 'pune', 'Viman Nagar', 2147483647);
+('Prajakta Deogune ', 'deoguneprajakta@gmail.com', 'white', '1 year', 'male', 'pune', 'Viman Nagar', 2147483647),
+('Prajakta Deogune ', 'deogunep@gmail.com', 'white', '3 months', 'male', 'pune', 'Viman Nagar', 2147483647);
 
 -- --------------------------------------------------------
 
@@ -261,7 +305,7 @@ CREATE TABLE `register` (
   `Lname` varchar(15) NOT NULL,
   `Username` varchar(30) NOT NULL,
   `Email` varchar(50) NOT NULL,
-  `phone` int(10) NOT NULL,
+  `Phone` int(10) NOT NULL,
   `Password` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -269,7 +313,7 @@ CREATE TABLE `register` (
 -- Dumping data for table `register`
 --
 
-INSERT INTO `register` (`Fname`, `Lname`, `Username`, `Email`, `phone`, `Password`) VALUES
+INSERT INTO `register` (`Fname`, `Lname`, `Username`, `Email`, `Phone`, `Password`) VALUES
 ('prajakta', 'deogune', 'prajakta1230', 'deoguneprajakta@gmail.com', 2147483647, 'kim@123');
 
 -- --------------------------------------------------------
