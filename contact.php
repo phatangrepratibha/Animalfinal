@@ -24,7 +24,7 @@ if  ($_SESSION['loggedin']!=true)
   <div class="container">
     <div class="row justify-content-md-center">
       <div class="col-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6">
-        <h3 class="fs-6 text-secondary mb-2 text-uppercase text-center">Get in Touch</h3>
+        <h3 class="fs-6 text-secondary mb-2 text-uppercase text-center"><span class="text-danger">* </span>Get in Touch <span class="text-danger">*</span></h3>
        
         <hr class="w-50 mx-auto mb-5 mb-xl-9 border-dark-subtle">
       </div>
@@ -34,7 +34,7 @@ if  ($_SESSION['loggedin']!=true)
   <div class="container">
     <div class="row gy-3 gy-md-4 gy-lg-0 align-items-xl-center">
       <div class="col-12 col-lg-6">
-        <img class="img-fluid rounded" loading="lazy" src="images/contact.jpg" height="1000px" alt="">
+        <img class="img-fluid rounded" loading="lazy" src="images/contact.jpg" height="2000px" alt="">
       </div>
       <div class="col-12 col-lg-6">
         <div class="row justify-content-xl-center">
@@ -59,7 +59,7 @@ if  ($_SESSION['loggedin']!=true)
                     </div>
                   </div>
                   <div class="col-12 col-md-6">
-                    <label for="phone" class="form-label">Phone Number</label>
+                    <label for="phone" class="form-label">Phone Number <span class="text-danger">*</span></label>
                     <div class="input-group">
                       <span class="input-group-text">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone" viewBox="0 0 16 16">
@@ -69,6 +69,22 @@ if  ($_SESSION['loggedin']!=true)
                       <input type="tel" class="form-control" id="phone" name="phone" value="">
                     </div>
                   </div>
+
+                  <div class="col-12">
+                    <label for="address" class="form-label">Enter Address <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="address" name="address" value="" required>
+                  </div>
+
+                  <div class="col-12">
+                    <label for="city" class="form-label">Enter Your City <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="city" name="city" value="" required>
+                  </div>
+
+                  <div class="col-12">
+                    <label for="pincode" class="form-label">Enter Pincode <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="pincode" name="pincode" value="" required>
+                  </div>
+                  
                   <div class="col-12">
                     <label for="subject" class="form-label">Subject <span class="text-danger">*</span></label>
                     <input type="text" class="form-control" id="subject" name="subject" value="" required>

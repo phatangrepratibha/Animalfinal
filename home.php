@@ -15,7 +15,7 @@ include "navbar.php";
   <meta name="description" content="" />
   <meta name="author" content="" />
 
-  <title>Petlor</title>
+  <title>AnimalTown</title>
 
   <!-- font awesome style -->
   <link href="css/font-awesome.min.css" rel="stylesheet" />
@@ -58,7 +58,7 @@ include "navbar.php";
                     </p>
                     <div class="btn-box">
                     
-                      <a href="" class="btn-2">
+                      <a href="contact.php" class="btn-2">
                         Contact us
                       </a>
                     </div>

@@ -38,7 +38,7 @@ include "navbar.php";
             <div class="row">
                 <div class="col">
                     <div class="card" style="width: 20rem;">
-                          <img src="images/gol.jpg" height="280px" class="card-img-top" alt="...">
+                          <img src="images/gol.jpg" height="350px" class="card-img-top" alt="...">
                            <div class="card-body">
                              <h5 class="card-title">Golden Retriever Dog</h5>
                               <a href="golform.php" class="btn btn-success">Adopt</a>
@@ -49,7 +49,7 @@ include "navbar.php";
 
                 <div class="col">
                     <div class="card" style="width: 20rem;">
-                          <img src="images/bull.jpg" height="280px" class="card-img-top" alt="...">
+                          <img src="images/bull.jpg" height="350px" class="card-img-top" alt="...">
                            <div class="card-body">
                              <h5 class="card-title">Bulldog</h5>
                               <a href="bullform.php" class="btn btn-success">Adopt</a>
@@ -60,7 +60,7 @@ include "navbar.php";
 
                 <div class="col">
                     <div class="card" style="width: 20rem;">
-                          <img src="images/coli.jpg"height="280px"  class="card-img-top" alt="...">
+                          <img src="images/coli.jpg"height="350px"  class="card-img-top" alt="...">
                            <div class="card-body">
                              <h5 class="card-title">Border Collie Dog</h5>
                               <a href="bordform.php" class="btn btn-success">Adopt</a>
@@ -73,7 +73,7 @@ include "navbar.php";
            <div class="row mt-5">
                 <div class="col">
                     <div class="card" style="width: 20rem;">
-                          <img src="images/hus.jpg "height="280px" class="card-img-top" alt="...">
+                          <img src="images/hus.jpg "height="350px" class="card-img-top" alt="...">
                            <div class="card-body">
                              <h5 class="card-title">Siberian Husky</h5>
                               <a href="huskyform.php" class="btn btn-success">Adopt</a>
@@ -84,7 +84,7 @@ include "navbar.php";
 
                 <div class="col">
                     <div class="card" style="width: 20rem;">
-                          <img src="images/ismiko.jpg" height="280px"class="card-img-top" alt="...">
+                          <img src="images/ismiko.jpg" height="350px"class="card-img-top" alt="...">
                            <div class="card-body">
                              <h5 class="card-title">American Eskimo Dog</h5>
                               <a href="eskimoform.php" class="btn btn-success">Adopt</a>
@@ -95,7 +95,7 @@ include "navbar.php";
 
                 <div class="col">
                     <div class="card" style="width: 20rem;">
-                          <img src="images/podle.jpg" height="280px" class="card-img-top" alt="...">
+                          <img src="images/podle.jpg" height="350px" class="card-img-top" alt="...">
                            <div class="card-body">
                              <h5 class="card-title">Poodle Dog</h5>
                               <a href="pooform.php" class="btn btn-success">Adopt</a>

@@ -38,7 +38,7 @@ include "navbar.php";
             <div class="row">
                 <div class="col">
                     <div class="card" style="width: 20rem;">
-                          <img src="images/per.jpg" height="280px" class="card-img-top" alt="...">
+                          <img src="images/per.jpg" height="350px" class="card-img-top" alt="...">
                            <div class="card-body">
                              <h5 class="card-title">Persian Cat</h5>
                               <a href="persianform.php" class="btn btn-success">Adopt</a>
@@ -49,7 +49,7 @@ include "navbar.php";
 
                 <div class="col">
                     <div class="card" style="width: 20rem;">
-                          <img src="images/bri.jpg" height="280px" class="card-img-top" alt="...">
+                          <img src="images/bri.jpg" height="350px" class="card-img-top" alt="...">
                            <div class="card-body">
                              <h5 class="card-title">British Shorthair Cat</h5>
                               <a href="britishform.php" class="btn btn-success">Adopt</a>
@@ -60,7 +60,7 @@ include "navbar.php";
 
                 <div class="col">
                     <div class="card" style="width: 20rem;">
-                          <img src="images/sia.jpg"height="280px"  class="card-img-top" alt="...">
+                          <img src="images/sia.jpg"height="350px"  class="card-img-top" alt="...">
                            <div class="card-body">
                              <h5 class="card-title">Siamese Cat</h5>
                               <a href="siaform.php" class="btn btn-success">Adopt</a>
@@ -73,7 +73,7 @@ include "navbar.php";
            <div class="row mt-5">
                 <div class="col">
                     <div class="card" style="width: 20rem;">
-                          <img src="images/maine.jpg "height="280px" class="card-img-top" alt="...">
+                          <img src="images/maine.jpg "height="350px" class="card-img-top" alt="...">
                            <div class="card-body">
                              <h5 class="card-title">Maine Coon Cat</h5>
                               <a href="maineform.php" class="btn btn-success">Adopt</a>
@@ -84,7 +84,7 @@ include "navbar.php";
 
                 <div class="col">
                     <div class="card" style="width: 20rem;">
-                          <img src="images/amerc.jpg" height="280px"class="card-img-top" alt="...">
+                          <img src="images/amerc.jpg" height="350px"class="card-img-top" alt="...">
                            <div class="card-body">
                              <h5 class="card-title">American Wirehair Cat</h5>
                               <a href="americform.php" class="btn btn-success">Adopt</a>
@@ -95,7 +95,7 @@ include "navbar.php";
 
                 <div class="col">
                     <div class="card" style="width: 20rem;">
-                          <img src="images/roll.jpg" height="280px" class="card-img-top" alt="...">
+                          <img src="images/roll.jpg" height="350px" class="card-img-top" alt="...">
                            <div class="card-body">
                              <h5 class="card-title">Ragdoll Cat</h5>
                               <a href="ragdollform.php" class="btn btn-success">Adopt</a>

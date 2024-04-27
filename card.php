@@ -42,7 +42,7 @@ if  ($_SESSION['loggedin']!=true)
             <div class="row">
                 <div class="col">
                     <div class="card" style="width: 20rem;">
-                          <img src="images/cat.jpg" height="280px" class="card-img-top" alt="...">
+                          <img src="images/cat.jpg" height="350px" class="card-img-top" alt="...">
                            <div class="card-body">
                              <h5 class="card-title">CAT</h5>
                               <a href="catadopt.php" class="btn btn-success">See More Details</a>
@@ -53,7 +53,7 @@ if  ($_SESSION['loggedin']!=true)
 
                 <div class="col">
                     <div class="card" style="width: 20rem;">
-                          <img src="images/d.jpg" height="280px" class="card-img-top" alt="...">
+                          <img src="images/dd.jpg" height="350px" class="card-img-top" alt="...">
                            <div class="card-body">
                              <h5 class="card-title">DOG</h5>
                               <a href="dogadopt.php" class="btn btn-success">See More Details</a>
@@ -64,7 +64,7 @@ if  ($_SESSION['loggedin']!=true)
 
                 <div class="col">
                     <div class="card" style="width: 20rem;">
-                          <img src="images/co.jpg"height="280px"  class="card-img-top" alt="...">
+                          <img src="images/co.jpg"height="350px"  class="card-img-top" alt="...">
                            <div class="card-body">
                              <h5 class="card-title">COW</h5>
                               <a href="cowadopt.php" class="btn btn-success">See More Details</a>
@@ -77,7 +77,7 @@ if  ($_SESSION['loggedin']!=true)
            <div class="row mt-5">
                 <div class="col">
                     <div class="card" style="width: 20rem;">
-                          <img src="images/bi.jpg "height="280px" class="card-img-top" alt="...">
+                          <img src="images/bi.jpg "height="350px" class="card-img-top" alt="...">
                            <div class="card-body">
                              <h5 class="card-title">BIRDS</h5>
                               <a href="birdadopt.php" class="btn btn-success">See More Details</a>
@@ -88,7 +88,7 @@ if  ($_SESSION['loggedin']!=true)
 
                 <div class="col">
                     <div class="card" style="width: 20rem;">
-                          <img src="images/go.jpg" height="280px"class="card-img-top" alt="...">
+                          <img src="images/go.jpg" height="350px"class="card-img-top" alt="...">
                            <div class="card-body">
                              <h5 class="card-title">GOAT</h5>
                               <a href="goatadopt.php" class="btn btn-success">See More Details</a>
@@ -99,7 +99,7 @@ if  ($_SESSION['loggedin']!=true)
 
                 <div class="col">
                     <div class="card" style="width: 20rem;">
-                          <img src="images/a.jpg" height="280px" class="card-img-top" alt="...">
+                          <img src="images/a.jpg" height="350px" class="card-img-top" alt="...">
                            <div class="card-body">
                              <h5 class="card-title">RABBIT</h5>
                               <a href="rabbitadopt.php" class="btn btn-success">See More Details</a>
