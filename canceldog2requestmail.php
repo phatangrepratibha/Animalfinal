@@ -12,7 +12,7 @@ if (mysqli_num_rows($result) > 0)
     $body = "Hello Sir/Mam,
                  We are sorry to inform you that your adoption request for bulldog dog
                  have been canceled.";
-    $headers = "From: deoguneprajakta@gmail.com";
+    $headers = "From: townanimal9@gmail.com";
 
         if (mail($to_email, $subject, $body, $headers)) 
         {
