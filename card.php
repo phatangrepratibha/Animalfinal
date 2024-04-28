@@ -17,7 +17,7 @@ if  ($_SESSION['loggedin']!=true)
         <meta name="description" content="" />
         <meta name="author" content="" />
 
-        <title>Petlor</title>
+        <title>AnimalTown</title>
 
         <!-- font awesome style -->
         <link href="font-awesome.min.css" rel="stylesheet" />
