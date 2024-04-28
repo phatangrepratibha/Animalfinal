@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 27, 2024 at 10:17 PM
+-- Generation Time: Apr 28, 2024 at 09:52 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -251,7 +251,8 @@ CREATE TABLE `persiancat` (
 
 INSERT INTO `persiancat` (`Name`, `Email`, `Colour`, `Age`, `Gender`, `City`, `Address`, `Phone`) VALUES
 ('Prajakta Deogune ', 'deoguneprajakta@gmail.com', 'white', '1 year', 'male', 'pune', 'Viman Nagar', 2147483647),
-('Prajakta Deogune ', 'deogunep@gmail.com', 'white', '3 months', 'male', 'pune', 'Viman Nagar', 2147483647);
+('Prajakta Deogune ', 'deogunep@gmail.com', 'white', '3 months', 'male', 'pune', 'Viman Nagar', 2147483647),
+('Simran Phatangre', 'phatangrepratibha18@gmail.com', 'black', '3 months', 'female', 'Ahmed Nagar', 'Akole', 2147483647);
 
 -- --------------------------------------------------------
 
@@ -314,7 +315,8 @@ CREATE TABLE `register` (
 --
 
 INSERT INTO `register` (`Fname`, `Lname`, `Username`, `Email`, `Phone`, `Password`) VALUES
-('prajakta', 'deogune', 'prajakta1230', 'deoguneprajakta@gmail.com', 2147483647, 'kim@123');
+('prajakta', 'deogune', 'prajakta1230', 'deoguneprajakta@gmail.com', 2147483647, 'kim@123'),
+('Simran', 'Phatangre', 'simran1313', 'phatangrepratibha18@gmail.com', 2147483647, 'sim123');
 
 -- --------------------------------------------------------
 
