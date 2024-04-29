@@ -73,8 +73,14 @@ $result = $conn->query($sql);
 				<td><?php echo $rows['Address'];?></td>
 				<td><?php echo $rows['Phone'];?></td>
 				<td>
-					<input type="submit" onClick="location.href='acceptcat1requestmail.php'" value="Accept">
-					<input type="submit" onClick="location.href='cancelcat1requestmail.php'" value="Cancel">
+					<form method="post" action="acceptcat1requestmail.php">
+						<input type="hidden" name="email" value="<?php echo $rows['Email']; ?>">
+						<input type="submit" name="accept" value="Accept">
+					</form>
+					<form method="post" action="cancelcat1requestmail.php">
+						<input type="hidden" name="email" value="<?php echo $rows['Email']; ?>">
+						<button type="submit" name="cancel">Cancel</button>
+					</form>
 				</td>
 			</tr>
 			<?php

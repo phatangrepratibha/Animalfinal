@@ -1,7 +1,7 @@
 <?php
 include "db_connect.php";
 include "adminnavbar.php";
-$sql = "SELECT * FROM ragdollcat";
+$sql = "SELECT * FROM acceptreq";
 $result = $conn->query($sql);
 
 ?>
@@ -46,14 +46,14 @@ $result = $conn->query($sql);
 
 <body>
 	<section>
-		<h1>Ragdoll Cat Adopt Requests</h1>
+		<h1>All Pet Adopt Requests Accepted Users</h1>
 		<table>
 			<tr>
 				<th>Full Name</th>
 				<th>Email</th>
-				<th>Cat Colour</th>
-				<th>Cat Age</th>
-				<th>Cat Gender</th>
+				<th>Pet Colour</th>
+				<th>Pet Age</th>
+				<th>Pet Gender</th>
 				<th>City</th>
 				<th>Address</th>
 				<th>Phone No</th>
@@ -72,16 +72,6 @@ $result = $conn->query($sql);
 				<td><?php echo $rows['City'];?></td>
 				<td><?php echo $rows['Address'];?></td>
 				<td><?php echo $rows['Phone'];?></td>
-				<td>
-					<form method="post" action="acceptcat6requestmail.php">
-						<input type="hidden" name="email" value="<?php echo $rows['Email']; ?>">
-						<input type="submit" name="accept" value="Accept">
-					</form>
-					<form method="post" action="cancelcat6requestmail.php">
-						<input type="hidden" name="email" value="<?php echo $rows['Email']; ?>">
-						<button type="submit" name="cancel">Cancel</button>
-					</form>
-				</td>
 			</tr>
 			<?php
 				}
@@ -89,5 +79,4 @@ $result = $conn->query($sql);
 		</table>
 	</section>
 </body>
-
 </html>

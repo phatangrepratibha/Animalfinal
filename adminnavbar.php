@@ -7,6 +7,8 @@
             <li><a href="userregister.php">View registered User</a></li>
             <li><a href="petadopt.php">Pet Adopt Requests</a></li>
             <li><a href="contactus.php">Contacted Users </a></li>
+            <li><a href="adoptaccept.php">Accepted Requests</a></li>
+            <li><a href="adoptcancel.php">Cancelled Requests </a></li>
             <li><a href="adminlogout.php">Admin Log Out</a></li>
         </ul>
         <style>
