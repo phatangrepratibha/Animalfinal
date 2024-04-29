@@ -13,7 +13,7 @@ include "adminnavbar.php";
         <meta name="description" content="" />
         <meta name="author" content="" />
 
-        <title>Petlor</title>
+        <title>AnimalTown</title>
 
         <!-- font awesome style -->
         <link href="font-awesome.min.css" rel="stylesheet" />
@@ -59,7 +59,7 @@ include "adminnavbar.php";
 
                 <div class="col">
                     <div class="card" style="width: 20rem;">
-                          <img src="images/sia.jpg"height="350px"  class="card-img-top" alt="...">
+                          <img src="images\sia.jpg" height="350px"  class="card-img-top" alt="...">
                            <div class="card-body">
                              <h5 class="card-title">Siamese Cat</h5>
                               <a href="managesiamesecat.php" class="btn btn-success">Manage</a>

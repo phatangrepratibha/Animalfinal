@@ -57,7 +57,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
   <div class="container">
     <div class="row gy-3 gy-md-4 gy-lg-0 align-items-xl-center">
       <div class="col-12 col-lg-6">
-        <img class="img-fluid rounded" loading="lazy" src="images/contact.jpg" height="2000px" alt="">
+        <img class="img-fluid rounded" loading="lazy" src="images/contactus1.jpg" height="2000px" alt="">
       </div>
       <div class="col-12 col-lg-6">
         <div class="row justify-content-xl-center">
