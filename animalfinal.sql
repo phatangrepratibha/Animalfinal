@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 28, 2024 at 09:52 AM
+-- Generation Time: Apr 29, 2024 at 06:57 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -20,6 +20,30 @@ SET time_zone = "+00:00";
 --
 -- Database: `animalfinal`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `acceptreq`
+--
+
+CREATE TABLE `acceptreq` (
+  `Name` varchar(50) NOT NULL,
+  `Email` varchar(50) NOT NULL,
+  `Colour` varchar(20) NOT NULL,
+  `Age` varchar(20) NOT NULL,
+  `Gender` varchar(10) NOT NULL,
+  `City` varchar(30) NOT NULL,
+  `Address` varchar(50) NOT NULL,
+  `Phone` int(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `acceptreq`
+--
+
+INSERT INTO `acceptreq` (`Name`, `Email`, `Colour`, `Age`, `Gender`, `City`, `Address`, `Phone`) VALUES
+('Simran Phatangre', 'phatangrepratibha18@gmail.com', 'black', '3 months', 'female', 'pune', 'Viman Nagar', 2147483647);
 
 -- --------------------------------------------------------
 
@@ -121,6 +145,30 @@ CREATE TABLE `bulldog` (
 
 INSERT INTO `bulldog` (`Name`, `Email`, `Colour`, `Age`, `Gender`, `City`, `Address`, `Phone`) VALUES
 ('Prajakta Deogune ', 'simran@gmail.com', 'white', '1 year', 'male', 'Ahmed Nagar', 'Savedi', 1234567890);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `cancelreq`
+--
+
+CREATE TABLE `cancelreq` (
+  `Name` varchar(50) NOT NULL,
+  `Email` varchar(50) NOT NULL,
+  `Colour` varchar(20) NOT NULL,
+  `Age` varchar(20) NOT NULL,
+  `Gender` varchar(10) NOT NULL,
+  `City` varchar(30) NOT NULL,
+  `Address` varchar(50) NOT NULL,
+  `Phone` int(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `cancelreq`
+--
+
+INSERT INTO `cancelreq` (`Name`, `Email`, `Colour`, `Age`, `Gender`, `City`, `Address`, `Phone`) VALUES
+('Supriya Phatangre', 'supriyaphatangre7@gmail.com', 'white', '3 months', 'male', 'Ahmed Nagar', 'Akole', 1234567890);
 
 -- --------------------------------------------------------
 
@@ -250,9 +298,7 @@ CREATE TABLE `persiancat` (
 --
 
 INSERT INTO `persiancat` (`Name`, `Email`, `Colour`, `Age`, `Gender`, `City`, `Address`, `Phone`) VALUES
-('Prajakta Deogune ', 'deoguneprajakta@gmail.com', 'white', '1 year', 'male', 'pune', 'Viman Nagar', 2147483647),
-('Prajakta Deogune ', 'deogunep@gmail.com', 'white', '3 months', 'male', 'pune', 'Viman Nagar', 2147483647),
-('Simran Phatangre', 'phatangrepratibha18@gmail.com', 'black', '3 months', 'female', 'Ahmed Nagar', 'Akole', 2147483647);
+('Prajakta Deogune ', 'deoguneprajakta@gmail.com', 'gray', '1 year', 'male', 'Ahmed Nagar', 'Savedi', 2147483647);
 
 -- --------------------------------------------------------
 
